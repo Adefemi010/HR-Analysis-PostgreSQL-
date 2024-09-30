@@ -57,6 +57,22 @@ Alter the employees table in the following way:
 
 - Rename the column job_position to position_title.
 
+# Query 3
+    ALTER TABLE employees
+    -- Set the column department_id to NOT NULL
+     ALTER COLUMN department_id SET NOT NULL,
+
+    -- Add a default value of CURRENT_DATE to the column start_date
+    ALTER COLUMN start_date SET DEFAULT CURRENT_DATE,
+
+    -- Add the column end_date with data type DATE
+    ADD COLUMN end_date DATE,
+
+    -- Add a constraint called birth_check to ensure no birth dates in the future
+    ADD CONSTRAINT birth_check CHECK (birth_date <= CURRENT_DATE),
+
+    -- Rename the column job_position to position_title
+    RENAME COLUMN job_position TO position_title;
 
 
 # Task 4
