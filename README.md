@@ -27,11 +27,11 @@ first_name,last_name ,job_position,start_date,birth_date
     last_name TEXT NOT NULL,             -- Last Name, Cannot be NULL
     job_position TEXT NOT NULL,          -- Job Position, Cannot be NULL
     salary NUMERIC,                      -- Salary, Numeric Data Type (optional)
-     start_date DATE NOT NULL,            -- Start Date, Cannot be NULL
-     birth_date DATE NOT NULL,            -- Birth Date, Cannot be NULL
+    start_date DATE NOT NULL,            -- Start Date, Cannot be NULL
+    birth_date DATE NOT NULL,            -- Birth Date, Cannot be NULL
     store_id INTEGER,                    -- Store ID, Integer (optional)
-     department_id INTEGER,               -- Department ID, Integer (optional)
-     manager_id INTEGER                   -- Manager ID, Integer (optional)
+    department_id INTEGER,               -- Department ID, Integer (optional)
+    manager_id INTEGER                   -- Manager ID, Integer (optional)
     );
 
 # Task 2
