@@ -34,7 +34,7 @@ first_name,last_name ,job_position,start_date,birth_date
         manager_id INTEGER                   -- Manager ID, Integer (optional)
     );
 
-    ![TASK 1](https://github.com/user-attachments/assets/91cb2128-d216-4669-8a17-5576494f6173)
+![TASK 1](https://github.com/user-attachments/assets/91cb2128-d216-4669-8a17-5576494f6173)
 
 
 # Task 2
@@ -147,7 +147,7 @@ Values:
     (25, 'Jack', 'Franklin', 'SQL Analyst', 6771.00, '2013-05-18', '2005-10-04', 1, 2, 2, NULL),
     (26, 'Jessica', 'Brown', 'SQL Analyst', 8566.00, '2003-10-23', '1965-01-29', 1, 1, 2, NULL);
 
-    ![TASK 4](https://github.com/user-attachments/assets/0f6b9d4d-fdf5-4690-9b9b-51167f952de0)
+![TASK 4](https://github.com/user-attachments/assets/0f6b9d4d-fdf5-4690-9b9b-51167f952de0)
 
     
 # Task 5
@@ -162,7 +162,7 @@ Insert the following values into the departments table. department_id :1,2,3,4,5
     (4, 'Website', 'IT'),
     (5, 'Backoffice', 'Administration');
 
-    ![TASK 5](https://github.com/user-attachments/assets/0e42e804-050a-47f9-b841-49918b2256e8)
+![TASK 5](https://github.com/user-attachments/assets/0e42e804-050a-47f9-b841-49918b2256e8)
 
 
  # Task 6  
@@ -201,7 +201,7 @@ What is the average salary of a SQL Analyst in the company (excluding Senior SQL
     FROM employees
     WHERE position_title = 'SQL Analyst';
 
-    ![TASK 9](https://github.com/user-attachments/assets/7a39aee0-8e28-47be-9711-7aef28f0d406)
+ ![TASK 9](https://github.com/user-attachments/assets/7a39aee0-8e28-47be-9711-7aef28f0d406)
 
 
 # Task 10
@@ -220,7 +220,7 @@ Secondly, add a column called is_active with 'false' if the employee has left th
     LEFT JOIN employees mng	
     ON emp.manager_id=mng.emp_id;
 
-    ![TASK 10](https://github.com/user-attachments/assets/a20452dd-f9ac-4b9a-8f43-c0c4afcda97d)
+![TASK 10](https://github.com/user-attachments/assets/a20452dd-f9ac-4b9a-8f43-c0c4afcda97d)
 
 
 # Task 11
@@ -254,7 +254,7 @@ Write a query that returns the average salaries for each positions with appropri
     ORDER BY 
     average_salary DESC
 
-    ![TASK 12](https://github.com/user-attachments/assets/8e79ba19-646f-48e4-b13a-e77f47c2e97a)
+![TASK 12](https://github.com/user-attachments/assets/8e79ba19-646f-48e4-b13a-e77f47c2e97a)
 
 
 # Task 13
@@ -268,7 +268,7 @@ What is the average salary for a Software Engineer in the company.
     WHERE 
     job_position = 'Software Engineer';
 
-    ![TASK 13](https://github.com/user-attachments/assets/56a90f35-4733-439e-8786-98788487a3aa)
+![TASK 13](https://github.com/user-attachments/assets/56a90f35-4733-439e-8786-98788487a3aa)
 
 
 # Task 14
@@ -287,7 +287,7 @@ What is the average salaries per division.
     ORDER BY 
     average_salary DESC
 
-    ![TASK 14](https://github.com/user-attachments/assets/3814a1e1-9e2b-4933-bd55-210c202f2573)
+![TASK 14](https://github.com/user-attachments/assets/3814a1e1-9e2b-4933-bd55-210c202f2573)
 
 
 # Task 15 
@@ -332,7 +332,7 @@ How many people earn less than there avg_position_salary?
     FROM employees) a
     WHERE salary<avg_pos_sal;
 
-    ![TASK 16](https://github.com/user-attachments/assets/671cb42e-8741-4c18-ba4b-2595f916785d)
+![TASK 16](https://github.com/user-attachments/assets/671cb42e-8741-4c18-ba4b-2595f916785d)
 
 
 # Task 17
@@ -374,7 +374,7 @@ Create the same running total but now also consider the fact that people were le
     WHERE is_active ='false'
     ORDER BY start_date) a;
 
-    ![TASK 18](https://github.com/user-attachments/assets/f158a96f-4228-4216-a784-8a621caaaf70)
+ ![TASK 18](https://github.com/user-attachments/assets/f158a96f-4228-4216-a784-8a621caaaf70)
 
     
  # Task 19
@@ -408,7 +408,7 @@ Add also the average salary per position_title.
     			   FROM employees e2
     			   WHERE e1.position_title=e2.position_title);
 
-    ![TASK 20](https://github.com/user-attachments/assets/774dcbca-f776-425b-b085-b320bd000717)
+![TASK 20](https://github.com/user-attachments/assets/774dcbca-f776-425b-b085-b320bd000717)
       
 
 # Task 21
@@ -429,7 +429,7 @@ These are the people that are the only ones with their position_title
     AND salary<>(SELECT ROUND(AVG(salary),2) as avg_in_pos FROM employees e3
     WHERE e1.position_title=e3.position_title)
 
-    ![TASK 21](https://github.com/user-attachments/assets/fad5a94d-e8b6-4cfd-889b-328f2be6e641)
+![TASK 21](https://github.com/user-attachments/assets/fad5a94d-e8b6-4cfd-889b-328f2be6e641)
 
        
 # Task 22
