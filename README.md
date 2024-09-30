@@ -10,3 +10,7 @@ Data Analysis: Using SQL queries to retrieve meaningful insights, such as identi
 Advanced SQL Techniques: Applying window functions (like RANK() and ROW_NUMBER()), common table expressions (CTEs), and aggregate functions to organize and manipulate data at various levels of detail, reflecting real-world HR management scenarios.
 
 The queries focus on providing the HR department with the ability to manage employee data, monitor salary developments, and produce reports that help in decision-making processes related to promotions, compensation, and workforce organization.
+
+# Task 1.1
+In your company there hasn't been a database table with all the employee information yet.
+You need to set up the table called employees in the following way:
