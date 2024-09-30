@@ -161,5 +161,48 @@ Update the values accordingly.
     SET position_title = 'Senior SQL Analyst', salary = 7200
     WHERE first_name = 'Jack' AND last_name = 'Franklin';
 
- 
+ # Task 7
+The responsible people decided to rename the position_title Customer Support to Customer Specialist.
+Update the values accordingly.
+
+# Query 7 
+    UPDATE employees
+    SET job_position = 'Customer Specialist'
+    WHERE job_position = 'Customer Support';
+
+# Task 8
+All SQL Analysts including Senior SQL Analysts get a raise of 6%.
+Upate the salaries accordingly.
+
+# Query 8 
+    UPDATE employees
+    SET salary = salary * 1.06
+    WHERE job_position IN ('SQL Analyst', 'Senior SQL Analyst');
+
+# Task 9
+What is the average salary of a SQL Analyst in the company (excluding Senior SQL Analyst)?
+
+# Query 9
+    SELECT AVG(salary) AS average_salary
+    FROM employees
+    WHERE job_position = 'SQL Analyst';
+
+# Task 10
+Write a query that adds a column called manager that contains  first_name and last_name (in one column) in the data output.
+Secondly, add a column called is_active with 'false' if the employee has left the company already, otherwise the value is 'true'.
+
+# Query 10
+
+    SELECT 
+    emp.*,
+    CASE WHEN emp.end_date IS NULL THEN 'true'
+    ELSE 'false' 
+    END as is_active,
+    mng.first_name ||' '|| mng.last_name AS manager_name
+    FROM employees emp
+    LEFT JOIN employees mng	
+    ON emp.manager_id=mng.emp_id;
+
+
+    
 
