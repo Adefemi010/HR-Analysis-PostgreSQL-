@@ -32,3 +32,4 @@ CREATE TABLE employees (
     manager_id INTEGER                   -- Manager ID, Integer (optional)
 );
 
+
