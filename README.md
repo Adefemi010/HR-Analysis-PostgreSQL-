@@ -152,5 +152,14 @@ Insert the following values into the departments table. department_id :1,2,3,4,5
     (4, 'Website', 'IT'),
     (5, 'Backoffice', 'Administration');
 
-    
+ # Task 6  
+Jack Franklin gets promoted to 'Senior SQL Analyst' and the salary raises to 7200.
+Update the values accordingly.
+
+# Query 6
+    UPDATE employees
+    SET position_title = 'Senior SQL Analyst', salary = 7200
+    WHERE first_name = 'Jack' AND last_name = 'Franklin';
+
+ 
 
