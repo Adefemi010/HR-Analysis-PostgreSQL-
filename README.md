@@ -140,6 +140,17 @@ Values:
     (25, 'Jack', 'Franklin', 'SQL Analyst', 6771.00, '2013-05-18', '2005-10-04', 1, 2, 2, NULL),
     (26, 'Jessica', 'Brown', 'SQL Analyst', 8566.00, '2003-10-23', '1965-01-29', 1, 1, 2, NULL);
     
-    	
+# Task 5
+Insert the following values into the departments table. department_id :1,2,3,4,5. department: Analytics, Finance, Sales, Website, Back Office. division: IT, Administration, Sales, IT, Administration.
+
+# Query 5
+    INSERT INTO departments (department_id, department, division)
+    VALUES 
+    (1, 'Analytics', 'IT'),
+    (2, 'Finance', 'Administration'),
+    (3, 'Sales', 'Sales'),
+    (4, 'Website', 'IT'),
+    (5, 'Backoffice', 'Administration');
+
     
 
