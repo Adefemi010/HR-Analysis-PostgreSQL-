@@ -315,6 +315,140 @@ Write a query that returns a running total of the salary development by the star
     start_date;
 
 
+# Task 18
+Create the same running total but now also consider the fact that people were leaving the company.
+
+# Query 18
+    SELECT 
+    start_date,
+    SUM(salary) OVER(ORDER BY start_date)
+    FROM (
+    SELECT 
+    emp_id,
+    salary,
+    start_date
+    FROM employees
+    UNION 
+    SELECT 
+    emp_id,
+    -salary,
+    end_date
+    FROM v_employees_info
+    WHERE is_active ='false'
+    ORDER BY start_date) a;
+    
+    
+ # Task 19
+ Write a query that outputs only the top earner per position_title including first_name and position_title and their salary.
+
+# Query 19
+    SELECT
+    first_name, 
+    position_title,
+    salary
+    FROM employees e1
+    WHERE salary = (SELECT MAX(salary)
+    			   FROM employees e2
+    			   WHERE e1.position_title=e2.position_title);
+
+
+# Task 20
+Add also the average salary per position_title.
+
+# Query 20
+    SELECT
+    first_name,
+    position_title,
+    salary,
+    (SELECT ROUND(AVG(salary),2) as avg_in_pos FROM employees e3
+    WHERE e1.position_title=e3.position_title)
+    FROM employees e1
+    WHERE salary = (SELECT MAX(salary)
+    			   FROM employees e2
+    			   WHERE e1.position_title=e2.position_title);
+
+# Task 21
+Remove those employees from the output of the previous query that has the same salary as the average of their position_title.
+These are the people that are the only ones with their position_title
+
+# Query 21
+    SELECT
+    first_name,
+    position_title,
+    salary,
+    (SELECT ROUND(AVG(salary),2) as avg_in_pos FROM employees e3
+    WHERE e1.position_title=e3.position_title)
+    FROM employees e1
+    WHERE salary = (SELECT MAX(salary)
+    			   FROM employees e2
+    			   WHERE e1.position_title=e2.position_title)
+    AND salary<>(SELECT ROUND(AVG(salary),2) as avg_in_pos FROM employees e3
+    WHERE e1.position_title=e3.position_title)
+    
+       
+# Task 22
+Write a query that returns all meaningful aggregations of
+sum of salary,
+number of employees,
+average salary
+grouped by all meaningful combinations of
+division,
+department,
+position_title.
+Consider the levels of hierarchies in a meaningful way.
+
+# Query 22
+    SELECT 
+    division,
+    department,
+    position_title,
+    SUM(salary),
+    COUNT(*),
+    ROUND(AVG(salary),2)
+    FROM employees
+    NATURAL JOIN departments
+    GROUP BY 
+    ROLLUP(
+    division,
+    department,
+    position_title
+    )
+    ORDER BY 1,2,3
+
+
+# Task 23
+Write a query that returns all employees (emp_id) including their position_title, department, their salary, and the rank of that salary partitioned by department.
+
+The highest salary per division should have rank 1.
+
+# Query 23
+
+    SELECT
+    emp_id,
+    position_title,
+    department,
+    salary,
+    RANK() OVER(PARTITION BY department ORDER BY salary DESC)
+    FROM employees
+    NATURAL LEFT JOIN departments
+
+
+# Task 24
+Write a query that returns only the top earner of each department including
+their emp_id, position_title, department, and their salary.
+
+    SELECT * FROM
+    (
+    SELECT
+    emp_id,
+    position_title,
+    department,
+    salary,
+    RANK() OVER(PARTITION BY department ORDER BY salary DESC)
+    FROM employees
+    NATURAL LEFT JOIN departments) a
+    WHERE rank=1
+
 
     
     
