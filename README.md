@@ -18,6 +18,7 @@ emp_id, first_name, last_name, job_position, salary, start_date, birth_date, soo
 There should be NOT NULL constraints for the following columns:
 first_name,last_name ,job_position,start_date,birth_date
 # Query 1.1
+
 CREATE TABLE employees (
     emp_id SERIAL PRIMARY KEY,           -- Primary Key, Auto-incremented Integer
     first_name TEXT NOT NULL,            -- First Name, Cannot be NULL
