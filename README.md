@@ -32,7 +32,7 @@ first_name,last_name ,job_position,start_date,birth_date
     store_id INTEGER,                    -- Store ID, Integer (optional)
      department_id INTEGER,               -- Department ID, Integer (optional)
      manager_id INTEGER                   -- Manager ID, Integer (optional)
-);
+    );
 
 # Task 2
 Set up an additional table called departments in the following way: department_id, department, diviion. No column should allow nulls
