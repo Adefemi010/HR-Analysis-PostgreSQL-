@@ -14,3 +14,20 @@ The queries focus on providing the HR department with the ability to manage empl
 # Task 1.1
 In your company there hasn't been a database table with all the employee information yet.
 You need to set up the table called employees in the following way:
+emp_id, first_name, last_name, job_position, salary, start_date, birth_date, soore_id, department_id, manager_id
+There should be NOT NULL constraints for the following columns:
+first_name,last_name ,job_position,start_date,birth_date
+# Query 1.1
+CREATE TABLE employees (
+    emp_id SERIAL PRIMARY KEY,           -- Primary Key, Auto-incremented Integer
+    first_name TEXT NOT NULL,            -- First Name, Cannot be NULL
+    last_name TEXT NOT NULL,             -- Last Name, Cannot be NULL
+    job_position TEXT NOT NULL,          -- Job Position, Cannot be NULL
+    salary NUMERIC,                      -- Salary, Numeric Data Type (optional)
+    start_date DATE NOT NULL,            -- Start Date, Cannot be NULL
+    birth_date DATE NOT NULL,            -- Birth Date, Cannot be NULL
+    store_id INTEGER,                    -- Store ID, Integer (optional)
+    department_id INTEGER,               -- Department ID, Integer (optional)
+    manager_id INTEGER                   -- Manager ID, Integer (optional)
+);
+
