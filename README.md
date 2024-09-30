@@ -185,7 +185,7 @@ What is the average salary of a SQL Analyst in the company (excluding Senior SQL
 # Query 9
     SELECT AVG(salary) AS average_salary
     FROM employees
-    WHERE job_position = 'SQL Analyst';
+    WHERE position_TITLE = 'SQL Analyst';
 
 # Task 10
 Write a query that adds a column called manager that contains  first_name and last_name (in one column) in the data output.
