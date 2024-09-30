@@ -167,8 +167,8 @@ Update the values accordingly.
 
 # Query 7 
     UPDATE employees
-    SET job_position = 'Customer Specialist'
-    WHERE job_position = 'Customer Support';
+    SET position_title = 'Customer Specialist'
+    WHERE position_title = 'Customer Support';
 
 # Task 8
 All SQL Analysts including Senior SQL Analysts get a raise of 6%.
@@ -177,7 +177,7 @@ Upate the salaries accordingly.
 # Query 8 
     UPDATE employees
     SET salary = salary * 1.06
-    WHERE job_position IN ('SQL Analyst', 'Senior SQL Analyst');
+    WHERE position_title IN ('SQL Analyst', 'Senior SQL Analyst');
 
 # Task 9
 What is the average salary of a SQL Analyst in the company (excluding Senior SQL Analyst)?
