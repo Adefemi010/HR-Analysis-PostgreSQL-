@@ -34,5 +34,15 @@ first_name,last_name ,job_position,start_date,birth_date
      manager_id INTEGER                   -- Manager ID, Integer (optional)
 );
 
+# Task 1.2
+Set up an additional table called departments in the following way: department_id, department, diviion. No column should allow nulls
+
+# Query 1.2
+
+    CREATE TABLE departments (
+        department_id SERIAL PRIMARY KEY,    -- Primary Key, Auto-incremented Integer, Not NULL
+        department TEXT NOT NULL,            -- Department Name, Cannot be NULL
+        division TEXT NOT NULL               -- Division Name, Cannot be NULL
+
 
 
