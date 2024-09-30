@@ -19,7 +19,7 @@ There should be NOT NULL constraints for the following columns:
 first_name,last_name ,job_position,start_date,birth_date
 # Query 1.1
 
-CREATE TABLE employees (
+    CREATE TABLE employees (
     
     emp_id SERIAL PRIMARY KEY,           -- Primary Key, Auto-incremented Integer
     
