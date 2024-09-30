@@ -1,5 +1,5 @@
 # HR-Analysis-PostgreSQL-
-In this HR task, we are utilizing SQL to perform a series of data management and analysis tasks involving employee information. The goal is to work with a database that stores detailed records of employees, such as their job positions, salaries, departments, and start dates, while executing queries to derive valuable insights.
+In this HR task, I am utilizing SQL to perform a series of data management and analysis tasks involving employee information. The goal is to work with a database that stores detailed records of employees, such as their job positions, salaries, departments, and start dates, while executing queries to derive valuable insights.
 
 The task involves multiple steps:
 
